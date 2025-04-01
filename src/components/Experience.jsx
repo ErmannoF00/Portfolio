@@ -57,16 +57,16 @@ const Experience = () => {
       jobTitle: "Research Assistant @",
       duration: "2024 - Present",
       desc: [
-        "Working in PGI-14 on computational neuroscience simulations.",
-        "Assisting in the development of brain-inspired models for neuromorphic hardware."
+        "[PGI-14] Neuromorphic Compute Nodes.",
+        "Memristive hardware realization of State Space Models and Mamba."
       ],
     },
     "Istituto Italiano di Tecnologia": {
-      jobTitle: "Intern @",
-      duration: "Summer 2023",
+      jobTitle: "Guest Student @",
+      duration: "April 2023 - April 2024",
       desc: [
-        "Contributed to projects in the field of bio-inspired AI and robotics.",
-        "Worked with memristive systems and learned tools for analog computing simulation."
+        "CONTACT Unit.",
+        "Implemented a GUI enabling smooth data integration from haptic devices and eye-tracking system."
       ],
     },
   };

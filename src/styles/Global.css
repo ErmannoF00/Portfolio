@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'NTR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-image: url("../assets/images/brain.jpg"); /* OR /background.jpg */
+  background-image: url("../assets/images/brain.jpg"); 
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
