@@ -16,6 +16,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'NTR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-image: url("/assets/images/brain.jpg"); /* OR /background.jpg */
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
   background-color: var(--navy);
   color: var(--lightest-slate);
   line-height: 1.6;
