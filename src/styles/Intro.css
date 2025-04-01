@@ -1,0 +1,36 @@
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 200px;
+  min-height: 100vh;
+}
+
+.intro-content h1 {
+  font-family: "NTR", sans-serif;
+  font-size: 64px;
+  color: var(--lightest-slate);
+}
+
+.intro-content p {
+  font-family: "NTR", sans-serif;
+  color: var(--slate);
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  #intro {
+    padding-top: 120px;
+  }
+
+  .intro-content h1 {
+    font-size: 40px;
+  }
+
+  .intro-content p {
+    font-size: 18px;
+  }
+}

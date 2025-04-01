@@ -1,0 +1,23 @@
+#about {
+  min-height: 50vh;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 100px;
+}
+
+#about p {
+  font-family: "NTR", sans-serif;
+  font-size: 22px;
+  text-align: justify;
+  color: var(--slate);
+}
+
+@media only screen and (max-width: 600px) {
+  #about {
+    padding-top: 60px;
+  }
+
+  #about p {
+    font-size: 18px;
+  }
+}

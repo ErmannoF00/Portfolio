@@ -1,0 +1,121 @@
+/* -------------------- Root Variables -------------------- */
+:root {
+  --navy: #0a192f;
+  --green-bright: #64ffda;
+  --lightest-navy: #233554;
+  --lightest-slate: #ccd6f6;
+  --slate: #8892b0;
+}
+
+/* -------------------- Global -------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'NTR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--navy);
+  color: var(--lightest-slate);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------- Links -------------------- */
+a {
+  text-decoration: none !important;
+  color: var(--green-bright) !important;
+}
+
+a:focus-visible {
+  outline: 2px dashed var(--green-bright);
+  outline-offset: 4px;
+}
+
+/* -------------------- Footer -------------------- */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--slate);
+  font-size: 0.9rem;
+  background-color: transparent;
+}
+
+/* -------------------- Buttons -------------------- */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--green-bright);
+  color: #0a192f;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #52e0c4;
+}
+
+/* -------------------- Section Headers -------------------- */
+.section-header {
+  display: flex;
+  padding-bottom: 42px;
+  width: 100vw;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 300px;
+  margin-top: 39px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+
+.section-title {
+  font-family: 'NTR', sans-serif;
+  color: var(--lightest-slate);
+  font-size: 46px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+
+  #content {
+    padding: 10px 10px;
+    width: 100%;
+  }
+
+  .section-header {
+    width: unset;
+  }
+
+  .section-header::after {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,28 @@
+#projects {
+  margin: auto;
+  padding-top: 100px;
+  max-width: 1000px;
+  min-height: 50vh;
+}
+
+#projects ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#projects li {
+  font-family: "NTR", sans-serif;
+  font-size: 20px;
+  color: var(--slate);
+  text-align: left;
+  padding-bottom: 10px;
+  position: relative;
+  padding-left: 24px;
+}
+
+#projects li::before {
+  content: "▹ ";
+  color: var(--green-bright);
+  position: absolute;
+  left: 0;
+}
