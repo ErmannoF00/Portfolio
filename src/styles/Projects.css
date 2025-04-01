@@ -55,8 +55,11 @@
 }
 
 .folder-icon {
+  font-size: 28px;
   color: var(--green-bright);
+  margin-right: 8px;
 }
+
 
 .card-title {
   font-family: "NTR", sans-serif;
