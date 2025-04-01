@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Projects.css";
 import FadeInSection from "./FadeInSection";
-import ExternalLinks from "./ExternalLinks";
 
 const Projects = () => {
   const projects = {
@@ -49,7 +48,6 @@ const Projects = () => {
               <li className="projects-card">
                 <div className="card-header">
                   <div className="folder-icon">📁</div>
-                  <ExternalLinks githubLink={project.link} />
                 </div>
                 <div className="card-title">{key}</div>
                 <div className="card-desc">{project.desc}</div>
