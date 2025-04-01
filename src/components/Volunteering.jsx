@@ -18,7 +18,7 @@ const Volunteering = () => (
         <li>
           <strong>IT Team – Website Maintenance</strong> at{" "}
           <a href="https://eestec.rwth-aachen.de/" target="_blank" rel="noopener noreferrer">
-            EESTech Challenge Aachen
+            EESTech LC Aachen
           </a>
         </li>
       </ul>
