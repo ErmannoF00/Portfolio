@@ -1,14 +1,21 @@
 import React from "react";
-import FadeInSection from "./FadeInSection";
-import "../styles/About.css";
+import Transition from "./Transition";
+import "../styles/Volunteering.css"; // same style used in volunteering
 
 const About = () => (
   <section id="about">
-    <FadeInSection>
-      <h2>Education</h2>
-      <ul>
+    <Transition>
+      <div className="section-header">
+        <span className="section-title">Education:</span>
+      </div>
+
+      <p className="about-description">
+        My academic background combines a foundation in biomedical engineering with strong focus on neurotechnologies and advanced studies in electronics engineering and computer science.
+      </p>
+
+      <ul className="volunteering-list">
         <li>
-          Bachelor in Biomedical Engineering –{" "}
+          <strong>Bachelor in Biomedical Engineering</strong> –{" "}
           <a
             href="https://unige.it"
             target="_blank"
@@ -18,9 +25,10 @@ const About = () => (
           </a>
         </li>
         <li>
-          Master in Electrical Engineering, Information Technology and Computer Science –{" "}
+          <strong>Master in Electrical Engineering, Information Technology and Computer Science</strong> –{" "}
           <a
-            href="https://www.rwth-aachen.de"
+            href="https://www.elektrotechnik.rwth-aachen.de/cms/
+            Elektrotechnik-und-Informationstechnik/Studium/Master-Studiengaenge/Master-of-Science/ENGLISCHSPRACHIG-Studiengang-Elektrote/Vertiefungsrichtungen-im-Master-ET-IT-/~qhis/Vertiefungsrichtung-Biomedical-Systems-E/?lidx=1"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +36,7 @@ const About = () => (
           </a>
         </li>
       </ul>
-    </FadeInSection>
+    </Transition>
   </section>
 );
 

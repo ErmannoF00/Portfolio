@@ -1,5 +1,5 @@
 import React from "react";
-import FadeInSection from "./FadeInSection";
+import Transition from "./Transition";
 import OrganicBrainSketch from "./OrganicBrainSketch";
 import "../styles/Intro.css";
 
@@ -7,7 +7,9 @@ const Intro = () => (
   <section id="intro">
     <div className="intro-content">
       <h1>Hi, Ermanno here!</h1>
-      <p>Welcome to my Portfolio</p>
+      <blockquote className="intro-quote">
+        <em>“The best ideas start with ‘what if?’.”</em>
+      </blockquote>
       <OrganicBrainSketch />
     </div>
   </section>

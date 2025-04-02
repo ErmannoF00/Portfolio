@@ -1,11 +1,11 @@
 import React from "react";
-import FadeInSection from "./FadeInSection";
+import Transition from "./Transition";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => (
-  <section id="contact">
-    <FadeInSection>
-      <h2>Contact</h2>
+  <section id="Contact">
+    <Transition>
+      <h2>Contacts:</h2>
       <p>
         <FaEnvelope /> Email: {" "}
         <a href="mailto:ermix.fiorillo@gmail.com">ermix.fiorillo@gmail.com</a>
@@ -20,7 +20,7 @@ const Contact = () => (
           Ermanno Fiorillo
         </a>
       </p>
-    </FadeInSection>
+    </Transition>
   </section>
 );
 

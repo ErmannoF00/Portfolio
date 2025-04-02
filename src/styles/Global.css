@@ -1,10 +1,10 @@
 /* -------------------- Root Variables -------------------- */
 :root {
-  --navy: #0a192f;
-  --green-bright: #64ffda;
-  --lightest-navy: #233554;
-  --lightest-slate: #ccd6f6;
-  --slate: #8892b0;
+  --navy: #000000; /* Changed to true black */
+  --green-bright: #64d3ff; /* Light blue tone */
+  --lightest-navy: #1a1a1a; /* Darker contrast */
+  --lightest-slate: #ffffff; /* Main text in white */
+  --slate: #cccccc; /* Secondary text */
 }
 
 /* -------------------- Global -------------------- */
@@ -16,11 +16,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'NTR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-image: url("../assets/images/brain.jpg"); 
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
   background-color: var(--navy);
   color: var(--lightest-slate);
   line-height: 1.6;
@@ -30,16 +25,18 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  align-items: center;
+  margin: 0 auto;
   min-height: 100vh;
-  width: 100vw;
+  max-width: 1000px; 
+  padding: 0 1rem;
 }
 
 main {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 0;
 }
+
 
 /* -------------------- Links -------------------- */
 a {
@@ -67,14 +64,14 @@ button {
   border: none;
   border-radius: 8px;
   background-color: var(--green-bright);
-  color: #0a192f;
+  color: var(--navy);
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #52e0c4;
+  background-color: #4db8e6;
 }
 
 /* -------------------- Section Headers -------------------- */
@@ -124,3 +121,20 @@ button:hover {
     font-size: 32px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+}
+
+
+/* (All other style rules remain unchanged, since they inherit color from variables) */

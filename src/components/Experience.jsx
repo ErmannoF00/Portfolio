@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, Tab, Typography, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import FadeInSection from "./FadeInSection";
+import Transition from "./Transition";
 import "../styles/Experience.css";
 
 const isHorizontal = window.innerWidth < 600;
@@ -77,9 +77,9 @@ const Experience = () => {
 
   return (
     <section id="experience">
-      <FadeInSection>
+      <Transition>
         <div className="section-header">
-          <span className="section-title">/ experience</span>
+          <span className="section-title">Experience:</span>
         </div>
         <div className={classes.root}>
           <Tabs
@@ -102,15 +102,15 @@ const Experience = () => {
               <div className="joblist-duration">{experienceItems[key].duration}</div>
               <ul className="job-description">
                 {experienceItems[key].desc.map((descItem, j) => (
-                  <FadeInSection key={j} delay={`${j + 1}00ms`}>
+                  <Transition key={j} delay={`${j + 1}00ms`}>
                     <li>{descItem}</li>
-                  </FadeInSection>
+                  </Transition>
                 ))}
               </ul>
             </TabPanel>
           ))}
         </div>
-      </FadeInSection>
+      </Transition>
     </section>
   );
 };

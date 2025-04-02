@@ -25,13 +25,14 @@ const btnStyle = {
   right: "20px",
   padding: "10px 14px",
   fontSize: "20px",
-  backgroundColor: "#4CAF50",
-  color: "#fff",
+  backgroundColor: "#64d3ff",  
+  color: "#000",               
   border: "none",
   borderRadius: "50%",
   cursor: "pointer",
   zIndex: 1000,
   transition: "opacity 0.3s ease-in-out",
 };
+
 
 export default ScrollToTopButton;

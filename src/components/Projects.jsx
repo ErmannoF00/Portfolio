@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Projects.css";
-import FadeInSection from "./FadeInSection";
+import Transition from "./Transition";
 
 const Projects = () => {
   const projects = {
@@ -39,21 +39,30 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="section-header">
-        <span className="section-title">/ projects</span>
+        <span className="section-title">Projects:</span>
       </div>
       <div className="project-container">
         <ul className="projects-grid">
           {Object.entries(projects).map(([key, project], i) => (
-            <FadeInSection key={i} delay={`${i + 1}00ms`}>
+            <Transition key={i} delay={`${i + 1}00ms`}>
               <li className="projects-card">
                 <div className="card-header">
                   <div className="folder-icon">📁</div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="external-link"
+                    title="View on GitHub"
+                  >
+                    🔗
+                  </a>
                 </div>
                 <div className="card-title">{key}</div>
                 <div className="card-desc">{project.desc}</div>
                 <div className="card-tech">{project.techStack}</div>
               </li>
-            </FadeInSection>
+            </Transition>
           ))}
         </ul>
       </div>

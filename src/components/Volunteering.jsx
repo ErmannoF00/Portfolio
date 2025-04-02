@@ -1,12 +1,12 @@
 import React from "react";
-import FadeInSection from "./FadeInSection";
+import Transition from "./Transition";
 import "../styles/Volunteering.css";
 
 const Volunteering = () => (
   <section id="volunteering">
-    <FadeInSection>
+    <Transition>
       <div className="section-header">
-        <span className="section-title">/ volunteering</span>
+        <span className="section-title">Volunteering:</span>
       </div>
       <ul className="volunteering-list">
         <li>
@@ -22,7 +22,7 @@ const Volunteering = () => (
           </a>
         </li>
       </ul>
-    </FadeInSection>
+    </Transition>
   </section>
 );
 

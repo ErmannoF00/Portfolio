@@ -1,23 +1,26 @@
-// src/components/FadeInSection.jsx
+// src/components/Transition.jsx
 import React, { useRef, useState, useEffect } from "react";
-import "../styles/FadeInSection.css";
+import "../styles/Transition.css";
 
-const FadeInSection = ({ children, delay = "0ms" }) => {
+const Transition = ({ children, delay = "0ms" }) => {
   const domRef = useRef();
   const [isVisible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) setVisible(true);
+      });
     });
+
     const { current } = domRef;
     if (current) observer.observe(current);
-    return () => observer.unobserve(current);
+    return () => current && observer.unobserve(current);
   }, []);
 
   return (
     <div
-      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      className={`transition-wrapper ${isVisible ? "show" : ""}`}
       ref={domRef}
       style={{ transitionDelay: delay }}
     >
@@ -26,4 +29,4 @@ const FadeInSection = ({ children, delay = "0ms" }) => {
   );
 };
 
-export default FadeInSection;
+export default Transition;

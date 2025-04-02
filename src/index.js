@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 
 // Global Styles
 import "./styles/Global.css";
-import "./styles/FadeInSection.css";
+import "./styles/Transition.css";
 import "./styles/NavBar.css";
 import "./styles/Intro.css";
 import "./styles/About.css";
