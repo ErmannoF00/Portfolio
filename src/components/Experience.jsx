@@ -55,6 +55,7 @@ const Experience = () => {
   const experienceItems = {
     "Forschungszentrum Jülich": {
       jobTitle: "Research Assistant @",
+      link: "https://www.fz-juelich.de/en/pgi/pgi-14",
       duration: "2024 - Present",
       desc: [
         "[PGI-14] Neuromorphic Compute Nodes.",
@@ -63,6 +64,7 @@ const Experience = () => {
     },
     "Istituto Italiano di Tecnologia": {
       jobTitle: "Guest Student @",
+      link: "https://contact.iit.it/",
       duration: "April 2023 - April 2024",
       desc: [
         "CONTACT Unit.",
@@ -98,7 +100,14 @@ const Experience = () => {
               <span className="joblist-job-title">
                 {experienceItems[key].jobTitle}
               </span>{" "}
-              <span className="joblist-job-company">{key}</span>
+              <a
+                className="joblist-job-company"
+                href={experienceItems[key].link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {key}
+              </a>
               <div className="joblist-duration">{experienceItems[key].duration}</div>
               <ul className="job-description">
                 {experienceItems[key].desc.map((descItem, j) => (
