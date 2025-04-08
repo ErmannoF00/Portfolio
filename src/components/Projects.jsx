@@ -9,10 +9,10 @@ const Projects = () => {
       techStack: "Python, PyQt5",
       link: "https://github.com/ErmannoF00/STT_Deutsch"
     },
-    "MemCrossbar": {
+    "MNN": {
       desc: "Simulation of an 'in-situ' training approach for memristor crossbar neural network.",
       techStack: "Python, LTSpice",
-      link: "https://github.com/ErmannoF00/MemCrossbar"
+      link: "https://github.com/ErmannoF00/MNN"
     },
     "SV_MemXBar": {
       desc: "SystemVerilog implementation of memristor crossbar and AdLIF neuron for neuromorphic applications.",
