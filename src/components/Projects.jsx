@@ -26,7 +26,7 @@ const Projects = () => {
     },
     "Kiki_Web": {
       desc: "Multifunctional website for my girlfriend, still much work to do for that Christmas gift...",
-      techStack: "JavaScript, C#, HTML",
+      techStack: "JavaScript, CSS, HTML",
       link: "https://github.com/ErmannoF00/Kiki_Web"
     },
     "Pathologies_Classification": {
