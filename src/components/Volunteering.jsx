@@ -21,6 +21,12 @@ const Volunteering = () => (
             EESTech LC Aachen
           </a>
         </li>
+        <li>
+          <strong>Scout Associate</strong> at{" "}
+          <a href="https://www.scoutovada1.org/" target="_blank" rel="noopener noreferrer">
+            Scout Agesci Ovada 1
+          </a>
+        </li>
       </ul>
     </Transition>
   </section>
