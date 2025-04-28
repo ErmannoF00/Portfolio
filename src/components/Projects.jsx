@@ -65,6 +65,20 @@ const Projects = () => {
             </Transition>
           ))}
         </ul>
+        <div className="more-projects">
+          <p>
+            Discover more on my{" "}
+            <a
+              href="https://github.com/ErmannoF00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              GitHub
+            </a>
+            !
+          </p>
+        </div>
       </div>
     </section>
   );
