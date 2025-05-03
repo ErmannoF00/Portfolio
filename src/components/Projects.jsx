@@ -5,12 +5,12 @@ import Transition from "./Transition";
 const Projects = () => {
   const projects = {
     "STT_Deutsch": {
-      desc: "Speech to Text Transcription GUI based on Vosk.",
+      desc: "Speech to Text Transcription GUI based on Vosk model.",
       techStack: "Python, PyQt5",
       link: "https://github.com/ErmannoF00/STT_Deutsch"
     },
     "MNN": {
-      desc: "Simulation of an 'in-situ' training approach for memristor crossbar neural network.",
+      desc: "Simulation of an 'in-situ' training approach for memristive neural network.",
       techStack: "Python, LTSpice",
       link: "https://github.com/ErmannoF00/MNN"
     },
@@ -20,12 +20,12 @@ const Projects = () => {
       link: "https://github.com/ErmannoF00/SV_MemXbar"
     },
     "i-Cube_IIT": {
-      desc: "Bachelor project based on a GUI that handles data flow from two cubic devices for haptic perception and an eye-tracking device.",
+      desc: "Bachelor project based on a GUI that handles data flow from two haptic devices for touch pressure perception and an eye-tracking device.",
       techStack: "Python, PyQt5",
       link: "https://github.com/ErmannoF00/i-Cube_IIT"
     },
     "Kiki_Web": {
-      desc: "Multifunctional website for my girlfriend, still much work to do for that Christmas gift...",
+      desc: "Multifunctional website for my girlfriend: webchat, letterbox, gameroom and still more work to do...",
       techStack: "JavaScript, CSS, HTML",
       link: "https://github.com/ErmannoF00/Kiki_Web"
     },
@@ -65,20 +65,24 @@ const Projects = () => {
             </Transition>
           ))}
         </ul>
-        <div className="more-projects">
-          <p>
-            Discover more on my{" "}
-            <a
-              href="https://github.com/ErmannoF00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              GitHub
-            </a>
-            !
-          </p>
-        </div>
+
+        {/* Add transition to GitHub link */}
+        <Transition delay={`${Object.keys(projects).length + 1}00ms`}>
+          <div className="more-projects">
+            <p>
+              Discover more on my{" "}
+              <a
+                href="https://github.com/ErmannoF00"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                GitHub
+              </a>
+              !
+            </p>
+          </div>
+        </Transition>
       </div>
     </section>
   );

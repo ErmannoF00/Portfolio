@@ -60,7 +60,6 @@
   margin-right: 8px;
 }
 
-
 .card-title {
   font-family: "NTR", sans-serif;
   color: var(--lightest-slate);
@@ -84,6 +83,28 @@
   font-style: italic;
 }
 
+/* -------------------- More Projects (GitHub) -------------------- */
+
+.more-projects {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: var(--slate);
+}
+
+.more-projects a.github-link {
+  color: var(--green-bright);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.more-projects a.github-link:hover {
+  border-bottom: 1px solid var(--green-bright);
+  color: var(--lightest-slate);
+}
+
 /* -------------------- Responsive -------------------- */
 
 @media only screen and (max-width: 768px) {
@@ -101,5 +122,10 @@
 
   .card-tech {
     font-size: 13px;
+  }
+
+  .more-projects {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 }
