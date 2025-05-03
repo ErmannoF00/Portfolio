@@ -33,7 +33,7 @@ const NavBar = () => {
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#projects" onClick={closeMenu}>Projects</a>
           <a href="#volunteering" onClick={closeMenu}>Volunteering</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href="#contact" onClick={closeMenu}>Contacts</a>
         </div>
         <div className="social-icons">
           <a href="https://github.com/ErmannoF00" target="_blank" rel="noopener noreferrer">
