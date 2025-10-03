@@ -1,0 +1,29 @@
+/* ===== Education Section ===== */
+
+/* Container (inherits spacing and title styles from Global.css) */
+#education {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+/* Education list (uses global brain bullets + typography) */
+.edu-list {
+  margin-top: 2px;
+  list-style: none;
+  padding: 0;
+}
+.edu-list li {
+  color: var(--slate);
+  font-size: var(--font-body);
+  margin-bottom: 6px;
+}
+.edu-list strong {
+  color: var(--lightest-slate);
+  font-weight: 700;
+}
+
+/* Links pick up global underline */
+.inline-link {
+  color: var(--green-bright) !important;
+}
+

@@ -1,0 +1,26 @@
+#about {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 24px;
+  scroll-margin-top: 80px;     
+}
+
+#about .section-header { margin-top: 0; }
+
+.about-lead {
+  font-family: 'NTR', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--font-body);
+  color: var(--lightest-slate);
+  line-height: 1.6;
+  text-align: justify;
+  margin: 12px 0 8px;
+}
+.about-lead .role-emph { font-weight: 600; font-size: inherit; }
+
+/* links pick up global animated underline */
+.about-lead .inline-link { color: var(--green-bright); }
+
+@media (max-width: 600px) {
+  #about { padding-top: 16px; scroll-margin-top: 64px; }
+  .about-lead { font-size: 18px; }
+}

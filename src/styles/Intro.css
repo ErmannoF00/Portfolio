@@ -1,0 +1,136 @@
+/* ===== Fullscreen splash ===== */
+.splash {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;     /* sit a bit closer to navbar */
+  overflow: hidden;
+  padding: 56px 16px 24px;       /* smaller top padding => higher hero */
+}
+
+.splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Title */
+.splash-title {
+  font-size: clamp(44px, 7vw, 68px);
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+/* Quote back to BLUE + italic, like your old one */
+.intro-quote {
+  font-family: "NTR", sans-serif;
+  font-style: italic;
+  font-size: clamp(18px, 2.2vw, 22px);
+  color: var(--green-bright);
+  margin: 4px 0 6px;
+  opacity: 0.95;
+}
+
+/* Hero container (unchanged look, just used for zoom animation) */
+.hero-portal {
+  position: relative;
+  display: inline-flex;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hero-frame {
+  position: relative;
+  border-radius: 16px;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+/* Keep your p5 brain centered & responsive */
+#brain-pic { padding: 0; }
+#brain-pic canvas {
+  width: min(70vw, 680px) !important;
+  height: auto !important;
+  max-width: 680px !important;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 12px rgba(100, 211, 255, 0.25));
+}
+
+/* soft glow around the frame (not neon) */
+.hero-frame::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 22px;
+  pointer-events: none;
+  background: radial-gradient(
+    60% 60% at 50% 50%,
+    rgba(100, 211, 255, 0.14),
+    rgba(100, 211, 255, 0.0) 70%
+  );
+  filter: blur(10px);
+}
+
+/* Hint text */
+.hint {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* Ambient, very subtle */
+.ambient-glow {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(60% 60% at 50% 30%, rgba(100,211,255,0.08), transparent 65%),
+    radial-gradient(40% 30% at 70% 70%, rgba(100,211,255,0.05), transparent 70%);
+  filter: blur(60px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ===== Iris cover transition ===== */
+.cover-iris {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(7, 18, 34, 0.85),
+      rgba(7, 18, 34, 1)
+    ),
+    linear-gradient(180deg, rgba(7,18,34,1), rgba(7,18,34,1));
+  display: grid;
+  place-items: center;
+}
+
+.cover-hole {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(10,25,47,0) 0%,
+    rgba(10,25,47,0.02) 50%,
+    rgba(10,25,47,0.1) 70%,
+    rgba(10,25,47,0.65) 100%
+  );
+  box-shadow:
+    0 0 80px rgba(100,211,255,0.18),
+    0 0 140px rgba(100,211,255,0.12);
+}
+
+/* Mobile nudges */
+@media (max-width: 600px) {
+  .splash { padding-top: 44px; }
+  #brain-pic canvas { width: min(86vw, 560px) !important; }
+}

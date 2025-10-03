@@ -1,0 +1,162 @@
+/* ===== Experience ===== */
+
+/* Wrap: sidebar | rail | content */
+.xp-wrap{
+  display:grid;
+  grid-template-columns: 320px 2px 1fr;     
+  align-items:start;
+  gap:24px;
+  margin-top:0 !important;
+}
+.xp-wrap--mobile{ grid-template-columns:1fr; gap:16px; }
+
+/* Sidebar (MUI) */
+.xp-tabs{
+  align-self:start;
+  padding-right:8px;
+}
+/* Kill MUI's default indicator; we'll use our own cursor bar */
+.xp-tabs .MuiTabs-indicator{ display:none !important; }
+
+/* --------- UNIFIED TYPE --------- */
+.xp-tab, .xp-tab *{
+  font-family:'NTR','Helvetica Neue',Helvetica;
+  text-transform: uppercase !important;
+  letter-spacing:.25px;
+  font-size:16px !important;
+  color:var(--lightest-slate) !important;
+  opacity:.95 !important;
+}
+
+/* Tab pill */
+.xp-tab{
+  position:relative;
+  justify-content:flex-start !important;
+  padding:12px 14px 12px 18px !important;
+  min-height:42px !important;
+  border-radius:10px !important;
+  margin:6px 0 !important;
+  border:1px solid rgba(255,255,255,.06);
+  background:rgba(255,255,255,0.02);
+  transition:
+    background .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+
+/* Hover */
+.xp-tab:hover{
+  background:rgba(255,255,255,0.04);
+  box-shadow:0 0 0 1px rgba(255,255,255,0.06) inset;
+}
+
+.xp-tab::before{
+  content:"";
+  position:absolute;
+  left:-6px; top:8%; bottom:8%;
+  width:3px;
+  border-radius:2px;
+  background:transparent;            
+  transition:background .25s ease, box-shadow .25s ease;
+}
+.xp-tab.Mui-selected::before{
+  background: var(--green-bright);   
+  box-shadow: 0 0 12px rgba(100,211,255,.55);
+}
+
+.xp-tab.Mui-selected{
+  background: rgba(100,211,255,0.26) !important;   
+  border-color: rgba(100,211,255,0.55) !important;
+  box-shadow:
+    inset 2px 0 0 var(--green-bright),
+    0 0 22px rgba(100,211,255,.28);
+  color: var(--lightest-slate) !important;
+  transform: translateZ(0);
+}
+.xp-tab.Mui-selected::after{
+  content:"";
+  position:absolute; inset:-4px;
+  border-radius:inherit; pointer-events:none;
+  box-shadow:
+    0 0 26px rgba(100,211,255,.45),
+    0 0 40px rgba(100,211,255,.20);
+  opacity:.8; animation: xpPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes xpPulse{
+  0%,100%{ opacity:.55; filter:blur(2px); }
+  50%    { opacity:1;    filter:blur(3px); }
+}
+
+/* ===== SINGLE vertical rail ===== */
+.xp-rail{
+  width:2px;
+  background: linear-gradient(180deg, rgba(100,211,255,.30), rgba(100,211,255,.08));
+  border-radius:1px;
+  min-height:100%;
+}
+.MuiTabs-vertical{ border-right: none !important; } 
+/* Content area */
+.xp-content{ width:100%; }
+.xp-panel-box{ padding:0; }
+
+.xp-heading{ margin:0 0 6px 0; line-height:1.35; }
+
+/* Titles + company link color */
+.joblist-job-title{
+  font-family:'NTR','Helvetica Neue',Helvetica;
+  font-size:24px;
+  font-weight:700;
+  color:var(--lightest-slate);
+}
+.joblist-job-company{
+  font-family:'NTR','Helvetica Neue',Helvetica;
+  font-size:24px;
+  color:var(--green-bright) !important;  
+  font-weight:700;
+}
+
+/* Period */
+.joblist-duration{
+  font-family:'NTR','Helvetica Neue',Helvetica;
+  font-size:14px;
+  color:var(--slate);
+  margin-bottom:10px;
+}
+
+/* Description list — bullets/spacing come from Global.css */
+.job-description{
+  list-style:none;
+  padding-left:0;
+  margin:10px 0 0;
+  max-width:720px;
+}
+.job-description li{
+  position:relative;
+  padding-left:36px;
+  padding-bottom:12px;
+  line-height:1.55;
+  font-size:var(--font-body);
+  color:var(--slate);
+}
+
+/* Mobile row of tabs */
+.xp-tabs--mobile .xp-tab{
+  text-align:center !important;
+  justify-content:center !important;
+  min-width:0 !important;
+  flex:1 1 auto !important;
+  margin:0 6px !important;
+}
+
+/* Responsive tweaks */
+@media (max-width:1000px){
+  .xp-wrap{ grid-template-columns:280px 2px 1fr; }
+}
+@media (max-width:760px){
+  .xp-wrap{ grid-template-columns:1fr; gap:10px; }
+  .xp-rail{ display:none; }
+  .joblist-job-title, .joblist-job-company{ font-size:22px; }
+  .job-description{ max-width:100%; }
+}

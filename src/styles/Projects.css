@@ -1,0 +1,101 @@
+/* Projects */
+#projects {
+  margin: 0;
+  padding-top: 0;          
+  max-width: var(--container);
+  min-height: 50vh;
+}
+
+/* -------------------- Grid Layout -------------------- */
+.project-container { margin-top: 0; }  
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* -------------------- Project Cards -------------------- */
+.projects-card {
+  background-color: var(--lightest-navy);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+.projects-card:hover {
+  transform: translateY(-6px);
+  background-color: #222; 
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.folder-icon { font-size: 28px; color: var(--green-bright); margin-right: 8px; }
+
+.card-title {
+  font-family: "NTR", sans-serif;
+  color: var(--lightest-slate);
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card-desc {
+  color: var(--slate);
+  font-size: 16px;
+  padding-bottom: 20px;
+  line-height: 1.4;
+}
+.card-tech {
+  color: var(--slate);
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* -------------------- Folder Icons -------------------- */
+.folder-icon svg {
+  color: var(--green-bright);
+  filter: drop-shadow(0 0 6px rgba(100,211,255,0.45));
+  transition: transform 220ms ease, filter 220ms ease;
+}
+.folder-icon svg:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 10px rgba(100,211,255,0.65));
+}
+
+
+/* -------------------- More Projects -------------------- */
+.more-projects {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: var(--slate);
+}
+.more-projects a.github-link {
+  color: var(--green-bright);
+  font-weight: 700;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size .22s ease, color .22s ease;
+}
+.more-projects a.github-link:hover {
+  background-size: 100% 1px;
+  color: var(--lightest-slate);
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .card-title { font-size: 20px; }
+  .card-desc { font-size: 14px; }
+  .card-tech { font-size: 13px; }
+  .more-projects { font-size: 1rem; padding: 0 1rem; }
+}

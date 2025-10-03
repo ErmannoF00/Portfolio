@@ -1,0 +1,19 @@
+#brain-pic {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#brain-pic canvas {
+  width: 100% !important;
+  max-width: 500px !important;
+  height: auto !important;
+  filter: drop-shadow(0 0 8px #64ffda88);
+}
+
+@media only screen and (max-width: 600px) {
+  #brain-pic canvas {
+    max-width: 300px !important;
+  }
+}

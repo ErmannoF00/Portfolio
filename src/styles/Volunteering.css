@@ -1,0 +1,29 @@
+/* ===== Volunteering Section ===== */
+
+/* Container */
+#volunteering {
+  margin: 0 auto;
+  padding-top: 0 !important;         
+  max-width: var(--container);
+  min-height: 0 !important;           
+}
+
+/* Use the shared brain bullets + spacing from Global.css */
+.volunteering-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;                         
+}
+.volunteering-list li {
+  padding-left: 36px;
+  padding-bottom: 12px;
+  color: var(--slate);
+  font-size: var(--font-body);
+  line-height: 1.55;
+}
+
+/* Links already animated via Global.css, just inherit */
+.volunteering-list a {
+  color: var(--green-bright);
+  text-decoration: none;
+}
