@@ -25,9 +25,6 @@
 # json
 *lock.json
 
-# Files
-public/cv/*.pdf
-
 
 npm-debug.log*
 yarn-debug.log*
