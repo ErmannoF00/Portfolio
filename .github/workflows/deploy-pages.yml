@@ -2,8 +2,8 @@ name: Build & Deploy React (CRA) to GitHub Pages
 
 on:
   push:
-    branches: [ main ]     # deploy on every push to main
-  workflow_dispatch:        # allow manual run
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -25,17 +25,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # IMPORTANT: no cache here, because you don't commit a lockfile
+          # cache: 'npm'  <-- remove
 
-      - name: Install deps
-        run: npm ci
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
 
       - name: Build
-        # Your package.json already has "homepage": "https://ermannof00.github.io/Portfolio"
-        # and your code uses <BrowserRouter basename="/Portfolio">, so no extra env needed.
         run: npm run build
 
-      - name: Upload artifact
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
