@@ -21,7 +21,7 @@ const About = () => (
         where neural activity inspires hardware and software co-design. I am interested in how concepts like 
         spiking computation and mixed-signal architectures can be exploited 
         to create <strong>energy-efficient systems</strong>.<br />
-        I particularly enjoy tackling problems at the intersection of <em>machine learning</em> and <em>analog and digital electronics</em>, with the goal of making computing 
+        I particularly enjoy tackling problems at the intersection of <em>machine learning</em> and <em> analog</em> and <em>digital electronics</em>, with the goal of making computing 
         architectures closer to how the brain actually works.
 
         <br /><br />
