@@ -1,17 +1,17 @@
 import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import brainImg from "../assets/images/brain.jpg"; // keep your image here
+import brainImg from "../assets/images/brain.jpg";
 import "../styles/Contact.css";
 
-// Serve CV from /public/cv/CV.pdf
-const cvPdf = process.env.PUBLIC_URL + "/cv/CV.pdf";
+// CV served from /public/cv/CV.pdf (works locally and on GH Pages)
+const cvPdf = `${process.env.PUBLIC_URL}/cv/CV.pdf`;
 
 export default function Contact() {
   const [open, setOpen] = useState(false);
 
   const toggle = useCallback(() => setOpen(v => !v), []);
-  const close = useCallback(() => setOpen(false), []);
+  const close  = useCallback(() => setOpen(false), []);
 
   return (
     <section id="contact">
@@ -39,7 +39,7 @@ export default function Contact() {
           </div>
         </motion.button>
 
-        {/* INLINE CV PANEL (appears directly under the image) */}
+        {/* Inline CV panel (under the image) */}
         <AnimatePresence initial={false}>
           {open && (
             <motion.div
@@ -49,9 +49,7 @@ export default function Contact() {
               exit={{ opacity: 0, y: -8, scale: 0.98, filter: "blur(6px)" }}
               transition={{ duration: 0.28, ease: [0.22, 0.61, 0.36, 1] }}
             >
-              {/* Stem that visually connects the panel to the image */}
               <div className="cv-stem" aria-hidden="true" />
-
               <div className="cv-minimal-card">
                 <div className="cv-header">
                   <div className="cv-title">
@@ -67,11 +65,12 @@ export default function Contact() {
                     <span className="file-size">PDF</span>
                   </div>
 
-                  {/* Two matching ghost buttons */}
                   <div className="cv-actions">
+                    {/* View in new tab */}
                     <a className="btn ghost" href={cvPdf} target="_blank" rel="noopener noreferrer">
                       View
                     </a>
+                    {/* Download (may be ignored by iOS Safari — browser limitation) */}
                     <a className="btn ghost" href={cvPdf} download>
                       Download
                     </a>
@@ -82,7 +81,7 @@ export default function Contact() {
           )}
         </AnimatePresence>
 
-        {/* Contact info (centered) */}
+        {/* Contact info */}
         <ul className="contact-list">
           <li>
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">

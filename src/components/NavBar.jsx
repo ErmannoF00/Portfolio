@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,6 +9,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const onSplash = pathname === "/";
 
+  // Track top-of-page for styling
   const [atTop, setAtTop] = useState(true);
   useEffect(() => {
     const onScroll = () => setAtTop(window.scrollY < 8);
@@ -17,21 +18,51 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [pathname]);
 
-  // Brand → smooth return to splash with neural glitch
-  const backToSplash = (e) => {
-    e.preventDefault();
-    navigate("/", { state: { wipe: "back" } });
-    // Ensure hero is framed
-    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "instant" }));
-  };
+  // Brand → back to splash, keep it smooth
+  const backToSplash = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (onSplash) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/", { state: { wipe: "back" } });
+        // make sure we land at top after route change
+        requestAnimationFrame(() =>
+          window.scrollTo({ top: 0, behavior: "instant" })
+        );
+      }
+    },
+    [navigate, onSplash]
+  );
 
-  // Navbar size/padding variants (expands on main, compact on splash)
+  // Click on a section link
+  const handleSectionClick = useCallback(
+    (e, href) => {
+      e.preventDefault();
+      if (onSplash) {
+        // Let the browser jump to the anchor after route change
+        navigate(`/main${href}`);
+      } else {
+        const id = href.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          // We already use scroll-margin-top in CSS, so this is enough
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          // update hash without reloading
+          window.history.replaceState(null, "", href);
+        }
+      }
+    },
+    [navigate, onSplash]
+  );
+
+  // Bar size/padding (compact on splash, larger on main)
   const barVariants = {
     splash: { height: 64, paddingLeft: 16, paddingRight: 16 },
     main:   { height: 84, paddingLeft: 24, paddingRight: 24 },
   };
 
-  // Center links reveal (staggered)
+  // Center links reveal
   const listVariants = {
     hidden: { opacity: 0, y: -6, pointerEvents: "none" },
     show: {
@@ -93,7 +124,12 @@ const NavBar = () => {
                   ["Volunteering", "#volunteering"],
                   ["Contacts", "#contact"],
                 ].map(([label, href]) => (
-                  <motion.a key={href} href={href} variants={itemVariants}>
+                  <motion.a
+                    key={href}
+                    href={href}
+                    variants={itemVariants}
+                    onClick={(e) => handleSectionClick(e, href)}
+                  >
                     {label}
                   </motion.a>
                 ))}
@@ -109,8 +145,8 @@ const NavBar = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
         >
-          <a href="https://github.com/ErmannoF00" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/ermanno-fiorillo-799296171" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+          <a href="https://github.com/ErmannoF00" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/ermanno-fiorillo-799296171" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
           <a href="mailto:ermix.fiorillo@gmail.com" aria-label="Email"><FaEnvelope /></a>
         </motion.div>
       </motion.div>
