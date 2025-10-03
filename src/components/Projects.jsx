@@ -1,6 +1,4 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
-import { VscFolderLibrary } from "react-icons/vsc";  
 import { AiOutlineFolderOpen } from "react-icons/ai"; 
 import "../styles/Projects.css";
 import Transition from "./Transition";
