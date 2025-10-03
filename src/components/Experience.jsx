@@ -60,8 +60,8 @@ const EXPERIENCE = {
     link: "https://www.prophesee.ai/",
     duration: "September 2025 – Present",
     desc: [
-      "DVS Characterization team.",
-      "Built an end-to-end ML pipeline to predict sensor outputs from bias/KPI configurations.",
+      "Sensors Characterization team.",
+      "Built an end-to-end ML pipeline to predict DVS outputs from bias/KPI configurations.",
       "Automated dataset curation and reporting to accelerate iteration and benchmarking."
     ],
   },
@@ -70,9 +70,9 @@ const EXPERIENCE = {
     link: "https://www.fz-juelich.de/en/pgi/pgi-14",
     duration: "October 2024 – July 2025",
     desc: [
-      "[PGI-14] Neuromorphic Compute Nodes.",
+      "[PGI-14] Unit - Neuromorphic Compute Nodes.",
       "Modeled memristive analog circuit to emulate the Mamba State Space Model architecture; analyzed noise, parasitics, and timing.",
-      "Implemented and evaluated Mamba with bilinear (Tustin) discretization (vs. ZOH) in software."
+      "Implemented and evaluated Mamba with bilinear (Tustin) discretization in software."
     ],
   },
   "Istituto Italiano di Tecnologia": {
@@ -80,8 +80,8 @@ const EXPERIENCE = {
     link: "https://contact.iit.it/",
     duration: "April 2023 – April 2024",
     desc: [
-      "CONTACT Unit.",
-      "Developed a real-time GUI fusing haptic-device and eye-tracking streams for seamless data intake.",
+      "[CONTACT] Unit - Cognitive Architecture for Collaborative Technologies.",
+      "Developed a real-time GUI fusing haptic-device and eye-tracking streams for seamless data collection.",
       "Analyzed gaze–touch correlation to probe visuo-tactile perception in human studies."
     ],
   },
