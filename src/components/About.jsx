@@ -20,7 +20,7 @@ const About = () => (
         This curiosity naturally led me toward the <span className="role-emph">neuromorphic paradigm</span>, 
         where neural activity inspires hardware and software co-design. I am interested in how concepts like 
         spiking computation and mixed-signal architectures can be exploited 
-        to create <strong>energy-efficient systems</strong>.<br />
+        to create energy-efficient systems.<br />
         I particularly enjoy tackling problems at the intersection of <em>machine learning</em> and <em> analog</em> and <em>digital electronics</em>, with the goal of making computing 
         architectures closer to how the brain actually works.
 
@@ -36,8 +36,7 @@ const About = () => (
           Prophesee
         </a></span>, where I work on <strong>event-based vision sensors</strong>.  
         My focus is on building <strong>end-to-end ML pipelines</strong> for sensor characterization, 
-        developing <strong>automated bias tuning and KPI prediction tools</strong>, and creating 
-        <strong>software frameworks</strong> that allow faster benchmarking and iteration.  
+        developing <strong>automated bias tuning and KPI prediction tools</strong>, and creating frameworks that allow faster benchmarking and iteration.  
         This role allows me to apply neuromorphic principles in practice, combining sensor physics, 
         embedded electronics, and data-driven modeling to push forward the next generation of vision systems.
       </p>
