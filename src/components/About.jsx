@@ -38,7 +38,7 @@ const About = () => (
         My focus is on building <strong>end-to-end ML pipelines</strong> for sensor characterization, 
         developing <strong>automated bias tuning and KPI prediction tools</strong>, and creating 
         <strong>software frameworks</strong> that allow faster benchmarking and iteration.  
-        This role allows me to apply neuromorphic principles in practice — combining sensor physics, 
+        This role allows me to apply neuromorphic principles in practice, combining sensor physics, 
         embedded electronics, and data-driven modeling to push forward the next generation of vision systems.
       </p>
     </Transition>
