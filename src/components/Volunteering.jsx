@@ -22,9 +22,9 @@ const Volunteering = () => (
           </a>
         </li>
         <li>
-          <strong>Scout Associate</strong> at{" "}
+          <strong>Former Scout Associate</strong> at{" "}
           <a href="https://www.scoutovada1.org/" target="_blank" rel="noopener noreferrer">
-            Former Scout Agesci Ovada 1
+            Scout Agesci Ovada 1
           </a>
         </li>
       </ul>
