@@ -40,7 +40,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="section-header">
-        <span className="section-title">Projects:</span>
+        <span className="section-title">Projects</span>
       </div>
       <div className="project-container">
         <ul className="projects-grid">
