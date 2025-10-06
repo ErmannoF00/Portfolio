@@ -6,7 +6,7 @@ const Volunteering = () => (
   <section id="volunteering">
     <Transition>
       <div className="section-header">
-        <span className="section-title">Volunteering:</span>
+        <span className="section-title">Volunteering</span>
       </div>
       <ul className="volunteering-list">
         <li>
