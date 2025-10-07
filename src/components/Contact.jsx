@@ -5,7 +5,7 @@ import brainImg from "../assets/images/brain.jpg";
 import "../styles/Contact.css";
 
 // CV served from /public/cv/CV.pdf (works locally and on GH Pages)
-const cvPdf = `${process.env.PUBLIC_URL}/cv/CV.pdf`;
+const cvPdf = `${process.env.PUBLIC_URL}/CV.pdf`;
 
 export default function Contact() {
   const [open, setOpen] = useState(false);
