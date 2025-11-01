@@ -30,8 +30,8 @@
 */
 .about-picture {
   position: relative;
-  max-width: 480px;                 /* smaller image */
-  margin: 28px auto 56px;           /* spacing: closer to navbar, more away from title */
+  max-width: 320px;                 /* smaller image */
+  margin: 14px auto 56px;           /* spacing: closer to navbar, more away from title */
   border-radius: 20px;
   overflow: hidden;
 
