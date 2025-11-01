@@ -24,3 +24,38 @@
   #about { padding-top: 16px; scroll-margin-top: 64px; }
   .about-lead { font-size: 18px; }
 }
+
+
+/* ===== PICTURE ABOVE ABOUT HEADER ===== */
+.about-picture {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.about-picture-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.about-picture-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-picture {
+    max-width: 92%;
+    border-radius: 14px;
+  }
+}
